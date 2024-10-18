@@ -9,4 +9,9 @@
   <Target Name="Tailwind" BeforeTargets="Compile">
     <Exec Command="npx tailwindcss -i ./wwwroot/app.css -o ./wwwroot/styles.css" />
   </Target>
+
+  <ItemGroup>
+    <Watch Include="./wwwroot/app.css" Exclude="./wwwroot/**/*;obj\**\*;bin\**\*" />
+  </ItemGroup>
+
 </Project>
